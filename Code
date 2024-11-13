@@ -242,13 +242,9 @@
         <h3>Front End and Back End Developer</h3>
         <p>I'm Front End and Back End Developer based in Malabon, Philippines
           and i'm very passionate and dedicated to my work.</p>
-        <div class="home-btn">
-          <a href="#" class="btn">Contact Info</a>
-          <a href="https://download1652.mediafire.com/hccx16301dagNncuu9FQpIC2uOlHZohalG7b00UKLtYMHdExJhVbMYued5vyLTyQQw1tsaaZuXZG_kVc2BXWvEmy1iyzPjKuGSAWR8hr_Xkh1hqOjHsBJXcZNZ27ikQ9WQXquD8nccH5NKY6j28bZNhZ1eEDFqr6heIbX9tgboT8wSA/a428retkf227sda/Gabayan+Johneric_December15-105255PM.pdf" class="btn">Download CV </a>
-        </div>
       </div>
       <div class="home-img">
-        <img src="https://i.ibb.co/xG2kmhq/122.jpg" />
+        <img src="https://i.ibb.co/dGMpsN7/me.jpg" />
       </div>
     </section>
 
@@ -267,7 +263,7 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="https://i.ibb.co/xG2kmhq/122.jpg"
+            src="https://i.ibb.co/dGMpsN7/me.jpg"
             alt="Profile picture"
             class="about-pic"
           />
@@ -276,7 +272,7 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="https://i.ibb.co/xG2kmhq/122.jpg"
+                src="assets/experience.png"
                 alt="Experience icon"
                 class="icon"
               />

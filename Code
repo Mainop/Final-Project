@@ -1,0 +1,691 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+          * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            list-style: none;
+          }
+
+          body 
+          {
+            background: linear-gradient(to left,  #e4a3a3, #e9a9a9);
+          }
+
+          header 
+          {
+            background: linear-gradient(to right,  #e95e5e, #d86b6b);
+            padding: 20px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 8rem;
+          }
+
+          .logo 
+          {
+            color: #1e1e24;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+
+          .navmenu {
+            display: flex;
+          }
+
+          .navmenu a 
+          {
+            display: inline-block;
+            margin: 0 1.5rem;
+            color: #1e1e24;
+            font-weight: 500;
+            transition: all 0.6s ease;
+          }
+
+          .navmenu a:hover 
+          {
+            transform: translateY(-5px);
+          }
+
+          .home 
+          {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            padding: 2rem 5rem 0 18rem;
+            gap: 1rem;
+          }
+
+          .home-img img 
+          {
+            border-radius: 30px; /* Make the image square */
+            width: 330px;
+            height: 350px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 0.5px solid #000000; /* Highlight profile image */
+          }
+
+          .home-text h2 
+          {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+          }
+
+          .home-text h3 
+          {
+            position: relative;
+            padding-left: 6rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+          }
+          .home-text h3::before 
+          {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 2px;
+            background-color: #1e1e24;
+            left: 0;
+            top: 1rem;
+          }
+              .home-text p 
+          {
+            margin-bottom: 2rem;  
+          }
+
+          .btn 
+          {
+            display: inline-block;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: #f7f7f2;
+            border: 1px solid #1e1e24;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: center;
+            background: #1e1e24;
+            transition: all 0.5s;
+          }
+
+          .btn:hover 
+          {
+            background: #f7f7f2;
+            color: #1e1e24;
+            transform: translateY(5px);
+          }
+
+          .socials-icons 
+          {
+            position: absolute;
+            top: 40%;
+            padding: 0 8rem;
+          }
+
+          .socials-icons i 
+          {
+            display: block;
+            margin: 25px 0;
+            color: #1e1e24;
+            font-size: 1.5rem;
+            transition: all 0.6s;
+          }
+
+          .socials-icons i:hover 
+          {
+            transform: rotate3d(0, 0, 1, 90deg);
+          }
+
+          .scroll-btn 
+          {
+            position: absolute;
+            bottom: 7%;
+            left: 9%;
+          }
+          .scroll-btn 
+          {
+            color: #1e1e24;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+          }
+
+          .container
+          {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+          }
+
+          .section
+          {
+            margin-bottom: 50px;
+          }
+
+          .section-title
+          {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #33322a; /* Highlight section titles */
+          }
+
+          .section-name
+          {
+            font-size: 24px;
+            color: #aa9f49;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+            text-align: center;
+          }
+
+          .section-content 
+          {
+            font-size: 16px;
+            line-height: 1.6;
+          }
+    </style>
+        <link rel="icon" type="image/x-icon" href="https://i.ibb.co/njtkDr9/New-Project-262-3158-B36.png?fbclid=IwZXh0bgNhZW0CMTAAAR0AzthvIBnItg6z4sbYqPag-eAufACUkVXAxdDobLT7WWJ8_6lh_S2267I_aem_AaPFXlS8mcHbveTYPwvO1fEUmlVX4qsKQohlh1_wQoXAPN0dslSZ5HgLAhnP874Dt4L1bKs6rXvmELtYNwXbQbvt">
+  </head>
+  <body>
+    <header>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="mediaqueries.css" />
+      <link rel="stylesheet" href="script.js"
+      <a href="#" class="logo">Mark Anthony Miano</a>
+      <ul class="navmenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <nav id="hamburger-nav">
+        <div class="logo">Mark Anthony Miano</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      <div class="menu-links">
+        <li><a href="#" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+    </header>
+
+    <section class="home">
+      <div class="home-text">
+        <h2>Hello I'm Mark <i class="ph-bold ph-hand-waving"></i></h2>
+        <h3>Front End and Back End Developer</h3>
+        <p>I'm Front End and Back End Developer based in Malabon, Philippines
+          and i'm very passionate and dedicated to my work.</p>
+        <div class="home-btn">
+          <a href="#" class="btn">Contact Info</a>
+          <a href="https://download1652.mediafire.com/hccx16301dagNncuu9FQpIC2uOlHZohalG7b00UKLtYMHdExJhVbMYued5vyLTyQQw1tsaaZuXZG_kVc2BXWvEmy1iyzPjKuGSAWR8hr_Xkh1hqOjHsBJXcZNZ27ikQ9WQXquD8nccH5NKY6j28bZNhZ1eEDFqr6heIbX9tgboT8wSA/a428retkf227sda/Gabayan+Johneric_December15-105255PM.pdf" class="btn">Download CV </a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="https://i.ibb.co/xG2kmhq/122.jpg" />
+      </div>
+    </section>
+
+    <div class="socials-icons">
+      <a href="https://www.facebook.com/miano0007"><i class="ph-bold ph-facebook-logo"></i></a>
+      <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
+      <a href="#"><i class="ph-bold ph-github-logo"></i></a>
+    </div>
+    <a href="#" class="scroll-btn">Scroll down
+      <i class="ph-bold ph-arrow-bend-right-down"></i>
+    </a>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="https://i.ibb.co/xG2kmhq/122.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="https://i.ibb.co/xG2kmhq/122.jpg"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1 year <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Science in Information Technology<br /></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Good day! My name is Mark Anthony Miano, and I am a dedicated frontend and backend developer hailing from Caloocan City. 
+              I hold a Bachelor of Science degree in Information Technology, which I earned from Global Reciprocal Colleges. 
+              My expertise spans both the client-side and server-side of web development, allowing me to create comprehensive and efficient digital solutions. 
+              With a strong educational foundation and practical experience, I am equipped to handle a wide range of development projects, bringing both technical skill and creative problem-solving to the table.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C#</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Sql</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="experience">
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Other Software Skills</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Photoshop</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>After Effects</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Capcut</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>AlightMotion</h3>
+                    <p>Experienced<p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PowerPoint</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>MS Excel</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>MS Word</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>haha</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://i.ibb.co/5674tDk/minimal1.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Soon</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://i.ibb.co/ck4rqZQ/minimal2.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Soon</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://i.ibb.co/JkmhRmN/minimal3.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Soonest</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">mainop007@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <ul class="navmenu">
+          <li><a href= "#" onclick="toggleMenu()">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Copyright &#169; 2024 Mark Anthony Miano. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
